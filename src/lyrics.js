@@ -18,8 +18,8 @@ const getTracks = async (name) => {
         }
     }).then((response) => {
         const {data} = response.data;
-        console.log(data[i]);
         for (let i = 0; i < data.length; i++) {
+            console.log(data[i]);
             preResult.push({
                 id: i,
                 artist: data[i].artist.name,

@@ -8,7 +8,7 @@ $ npm install music-track-data-api
 
 ## Usage
 ```javascript
-const getTracks = require('lyrics-api');
+const getTracks = require('music-track-data-api');
 
 await getTracks('Times Like These')
     .then(console.log)

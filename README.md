@@ -6,12 +6,12 @@ This package is currently undergoing initial development. DO NOT USE until this 
 
 ## Installing
 ```
-$ npm install music-track-data
+npm install @green-code/music-track-data
 ```
 
 ## Usage
 ```javascript
-const getTracks = require('music-track-data');
+const getTracks = require('@green-code/music-track-data');
 
 await getTracks('Times Like These')
     .then(console.log)
@@ -25,9 +25,12 @@ If the API doesn't find any lyrics, you will get an empty array.
   "id": 0,
   "artist": "Foo Fighters",
   "title": "Times Like These",
-  "link": "https://www.deezer.com/track/4311600",
-  "album": "https://e-cdn-images.dzcdn.net/images/cover/266f01f1c7a04843d11cd08f9c07d11f/250x250-000000-80-0-0.jpg",
-  "lyrics": "I, I'm a one way motorway\nI'm the one that drives away\nThen follows you back home\nI, I'm a street light shining\nI'm a wild light blinding bright\nBurning off alone..."
+  "preview": "http://cdn-preview-9.deezer.com/stream/c-9516e9507adaaf3f0fa2354c816adeb8-5.mp3",
+  "lyrics": "I, I'm a one way motorway\nI'm the one that drives away\nThen follows you back home\nI, I'm a street light shining\nI'm a wild light blinding bright\nBurning off alone...",
+  "album": {
+    "title": "Greatest Hits",
+    "artwork": "http://e-cdn-images.dzcdn.net/images/cover/266f01f1c7a04843d11cd08f9c07d11f/1000x1000-000000-80-0-0.jpg"
+  }
 }
 ```
 

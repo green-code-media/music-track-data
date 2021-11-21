@@ -8,4 +8,4 @@
  * Author: github.com/beningreenjam
  */
 
- module.exports = require('./src/lyrics');
+ module.exports = require('./src/data');

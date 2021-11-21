@@ -8,8 +8,8 @@ const urls = require('./urls');
  */
 
 const getTracks = async (name) => {
-    let preResult = [];
-    let result = [];
+    const preResult = [];
+    const results = [];
     await axios({
         'method': 'get',
         'url': `${urls.urlSearch}${encodeURIComponent(name)}`,
@@ -19,12 +19,11 @@ const getTracks = async (name) => {
     }).then((response) => {
         const {data} = response.data;
         for (let i = 0; i < data.length; i++) {
-            console.log(data[i]);
             preResult.push({
                 id: i,
                 artist: data[i].artist.name,
                 title: data[i].title,
-                link: data[i].link,
+                preview: data[i].preview,
                 album: data[i].album,
             })
         }
@@ -40,7 +39,7 @@ const getTracks = async (name) => {
         }).then((response) => {
             const lyrics = (response.data.lyrics?.split('\n') ?? [])
                 .map(line => {
-                    if (line.startsWith('Paroles de la chanson')) return '';
+                    if (line.startsWith('Paroles de la chanson') || line.startsWith('[Thanks to ')) return '';
                     return line;
                 })
                 .filter(line => !!line)
@@ -50,18 +49,21 @@ const getTracks = async (name) => {
                 return;
             }
 
-            result.push({
+            results.push({
                 id: i,
-                artist: preResult[i].artist,
                 title: preResult[i].title,
-                link: preResult[i].link,
-                thumb: preResult[i].album.cover_medium,
+                artist: preResult[i].artist,
+                preview: preResult[i].preview,
                 lyrics,
+                album: {
+                    title: preResult[i].album.title,
+                    artwork: preResult[i].album.cover_xl,
+                },
             })
         }).catch(console.log);
     }
 
-    return result;
+    return results;
 }
 
 module.exports = getTracks;

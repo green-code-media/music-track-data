@@ -1,6 +1,6 @@
 {
   "name": "@green-code/music-track-data",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A music API. Provides you an array of music track data including lyrics, album, artist and title, simply by performing a fuzzy search on the lyrics or title.",
   "main": "index.js",
   "homepage": "https://github.com/green-code-media/music-track-data#readme",

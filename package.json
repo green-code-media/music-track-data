@@ -1,0 +1,22 @@
+{
+  "name": "music-api",
+  "version": "1.0.0",
+  "description": "A music API. Provides you an array of music track data including lyrics, album, artist and title, simply by performing a fuzzy search on the lyrics or title.",
+  "main": "index.js",
+  "homepage": "https://github.com/beningreenjam/lyrics-api#readme",
+  "repository": "https://github.com/beningreenjam/lyrics-api",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "lyrics",
+    "lyrics-api",
+    "music api",
+    "song api"
+  ],
+  "author": "beningreenjam",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}

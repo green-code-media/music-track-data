@@ -1,6 +1,9 @@
 # Music Track Data API
 A simple JavaScript music track data search API.
 
+## WARNING
+This package is currently undergoing initial development. DO NOT USE until this warning has been removed.  
+
 ## Installing
 ```
 $ npm install music-track-data

@@ -3,12 +3,12 @@ A simple JavaScript music track data search API.
 
 ## Installing
 ```
-$ npm install music-track-data-api
+$ npm install music-track-data
 ```
 
 ## Usage
 ```javascript
-const getTracks = require('music-track-data-api');
+const getTracks = require('music-track-data');
 
 await getTracks('Times Like These')
     .then(console.log)

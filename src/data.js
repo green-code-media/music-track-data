@@ -37,7 +37,9 @@ const getTracks = async (name) => {
                 'content-type': 'application/json'
             }
         }).then((response) => {
-            const lyrics = (response.data.lyrics?.split('\n') ?? [])
+            console.log({lyrics: response.data.lyrics});
+            const paragraphs = (response.data.lyrics?.split('\n') ?? [])
+            const lyrics = paragraphs
                 .map(line => {
                     if (line.startsWith('Paroles de la chanson') || line.startsWith('[Thanks to ')) return '';
                     return line;

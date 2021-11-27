@@ -28,7 +28,7 @@ await getLyrics("Foo Fighters", "Times Like These")
 ```
 The method returns an object in the format below.
 
-This method call uses MusicMatch and requires an API key.
+This method call uses MusicMatch and requires an API key. Set yours with the var name of `MUSICMATCH_API_KEY`
 
 ```json
 {

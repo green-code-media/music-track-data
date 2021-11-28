@@ -21,16 +21,18 @@ If the API doesn't find any data, you will get an empty array.
 You don't require an API key to use this method.
 
 ```json
-{
-  "id": 0,
-  "artist": "Foo Fighters",
-  "title": "Times Like These",
-  "preview": "http://cdn-preview-9.deezer.com/stream/c-9516e9507adaaf3f0fa2354c816adeb8-5.mp3",
-  "album": {
-    "title": "Greatest Hits",
-    "artwork": "http://e-cdn-images.dzcdn.net/images/cover/266f01f1c7a04843d11cd08f9c07d11f/1000x1000-000000-80-0-0.jpg"
+[
+  {
+    "id": 0,
+    "artist": "Foo Fighters",
+    "title": "Times Like These",
+    "preview": "http://cdn-preview-9.deezer.com/stream/c-9516e9507adaaf3f0fa2354c816adeb8-5.mp3",
+    "album": {
+      "title": "Greatest Hits",
+      "artwork": "http://e-cdn-images.dzcdn.net/images/cover/266f01f1c7a04843d11cd08f9c07d11f/1000x1000-000000-80-0-0.jpg"
+    }
   }
-}
+]
 ```
 
 ## Get Lyrics
